@@ -1,0 +1,160 @@
+/* Custom Variables */
+
+:root {
+    --clr-cream: hsl(30, 38%, 92%);
+    --clr-darkcyan: hsl(158, 36%, 37%);
+    --clr-darkercyan: hsl(158, 75%, 17%);
+    --clr-darkblue: hsl(212, 21%, 14%);
+    --clr-darkgrayblue: hsl(228, 12%, 48%);
+    --clr-white: hsl(0, 0%, 100%);
+
+    --ff-montserrat: 'Montserrat', sans-serif;
+    --ff-fraunces: 'Fraunces', serif;
+
+    --fs-paragraph: .875rem;
+    --fs-large: 2rem;
+
+    --fw700: 700;
+
+    --margintop: 1rem;
+}
+
+
+/* Reset */
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+
+body {
+    display: flex;
+    background-color: var(--clr-cream);
+    font-size: var(--fs-paragraph);
+    font-family: var(--ff-montserrat);
+    padding: 1.6rem .6rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.flow-content > * + * {
+    margin-top: var(--margintop, 1rem)
+}
+
+h1,
+.price {
+    font-family: var(--ff-fraunces);
+}
+
+.product-type,
+.product-description,
+.price {
+    color: var(--clr-darkgrayblue);
+}
+
+
+.product-image img {
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+h1 {
+    line-height: 1.25;
+}
+
+
+.product-text {
+    background-color: var(--clr-white);
+    padding: 2rem 1rem;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.product-type {
+    text-transform: uppercase;
+    letter-spacing: .5em;
+}
+
+.product-description {
+    line-height: 1.6;
+}
+
+.price-discount {
+    color: var(--clr-darkcyan);
+    font-size: var(--fs-large);
+    font-weight: var(--fw700);
+    margin-right: 2rem;
+}
+
+.price-original {
+    text-decoration: line-through;
+    padding-bottom: 2rem;
+}
+
+
+.btn {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    background-color: var(--clr-darkcyan);
+    color: var(--clr-white);
+    padding: 1rem 3rem;
+    cursor: pointer;
+    font-weight: var(--fw700);
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: var(--clr-darkercyan);
+}
+
+
+/* Media Queries */
+
+@media (min-width: 600px) {
+
+  .card {
+    flex-direction: row;
+    width: 50%;
+    margin: 5rem auto;
+  }
+
+  .card > * {
+    width: 100%;
+  }
+
+  .product-image img {
+    border-bottom-left-radius: 5px;
+  }
+
+  .product-text {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+}
+
+
+
