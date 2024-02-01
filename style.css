@@ -1,24 +1,3 @@
-/* Custom Variables */
-
-:root {
-    --clr-cream: hsl(30, 38%, 92%);
-    --clr-darkcyan: hsl(158, 36%, 37%);
-    --clr-darkercyan: hsl(158, 75%, 17%);
-    --clr-darkblue: hsl(212, 21%, 14%);
-    --clr-darkgrayblue: hsl(228, 12%, 48%);
-    --clr-white: hsl(0, 0%, 100%);
-
-    --ff-montserrat: 'Montserrat', sans-serif;
-    --ff-fraunces: 'Fraunces', serif;
-
-    --fs-paragraph: .875rem;
-    --fs-large: 2rem;
-
-    --fw700: 700;
-
-    --margintop: 1rem;
-}
-
 
 /* Reset */
 
@@ -43,12 +22,50 @@ p {
     margin: 0;
 }
 
+
+/* Custom Variables */
+
+:root {
+    --clr-cream: hsl(30, 38%, 92%);
+    --clr-darkcyan: hsl(158, 36%, 37%);
+    --clr-darkercyan: hsl(158, 75%, 17%);
+    --clr-darkblue: hsl(212, 21%, 14%);
+    --clr-darkgrayblue: hsl(228, 12%, 48%);
+    --clr-white: hsl(0, 0%, 100%);
+
+    --ff-montserrat: 'Montserrat', sans-serif;
+    --ff-fraunces: 'Fraunces', serif;
+
+    --fs-paragraph: .875rem;
+    --fs-large: 2rem;
+
+    --fw700: 700;
+
+    --margintop: 1rem;
+}
+
+
+/* UTILITIES */
+
+.visually-hidden {
+    clip-path: inset(50%);
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    white-space: nowrap;
+}
+
+.flow-content > * + * {
+    margin-top: var(--margintop, 1rem)
+}
+
+
 .main {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 100svh;
 }
 
 body {
@@ -63,11 +80,6 @@ body {
     max-width: 35rem;
 }
 
-
-
-.flow-content > * + * {
-    margin-top: var(--margintop, 1rem)
-}
 
 h1,
 .price {
@@ -131,7 +143,7 @@ h1 {
 
 .btn {
     display: flex;
-    gap: 1em;
+    gap: 1rem;
     justify-content: center;
     width: 100%;
     border: none;
@@ -151,7 +163,7 @@ h1 {
 
 /* Media Queries */
 
-@media (min-width: 600px) {
+@media (min-width: 40rem) {
 
   .card {
     flex-direction: row;
